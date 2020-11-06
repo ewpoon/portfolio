@@ -1,6 +1,13 @@
 body{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(241, 243, 255);
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    background-color:white;
+    /* #9AD4D6 */
+    /* #d1bacd; */
+    border-width: 16px;
+    border-color: #9AD4D6;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
 }
 
 header {
@@ -16,35 +23,80 @@ header {
 h1 {
     font-family: 'Poppins', 'Times New Roman', Times, serif;
     font-size: 50px;
-    color: black;
+    color: #3b3b3b;
 
 }
 
 h2 {
+    text-align: center;
     font-family: 'Poppins', 'Times New Roman', Times, serif;
     font-size: 38px;
+    color: #3b3b3b;
 }
 
 h3 {
     font-family: 'Poppins', 'Times New Roman', Times, serif;
     font-size: 23px;
-    padding-top: 5px;
     padding-bottom: 5px;
+    color: #3b3b3b;
+    line-height: 30px;
+    /* text-align: center; */
+}
+
+
+h4 {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-size: 17px;
+    /* padding-bottom: 5px; */
+    color: #666666;
+    text-align: center;
+    
+}
+
+h5 {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 20px;
 }
 
 p {
     font-family: 'Poppins', 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 16px;
+    color: #666666;
+    line-height: 26px;
+}
+
+a {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+   
+}
+
+img {
+    border-color: #9AD4D6;
+    border-style: solid;
+    border-width:4px;
+    padding: 9px;
+    margin: 4px;
+}
+
+legend, label, span{
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    
+}
+
+nav {
+    padding-bottom: 15px;
 }
 
 .nav_item a:link, a:visited{
     text-decoration: none;
-    color:black;
+    color:#3b3b3b;
 }
 
 
 .nav_item a:hover, a:focus, a:active{
-    color: black;
+    color: #3b3b3b;
     text-decoration: underline;
     /* -webkit-text-decoration-style: dotted;
             text-decoration-style: dotted; */
@@ -62,18 +114,42 @@ p {
     
 }
 
+#ux_title {
+    text-align: center;
+}
+
+.ux_container {
+    display: grid;
+    grid-template-columns: 15px 1fr 15px;
+    padding-bottom: 50px;
+}
+
+.section_1text, .section_2text, .section_3text, .section_4text {
+    grid-column: 2/span 1;
+    padding: 9px;
+    margin: 4px;
+    text-align: center;
+}
+
+#section_1img, #section_2img , #section_3img{
+    grid-column:2/ span 1;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 #intro {
     grid-column: 2/ span 1;
 }
 
 #intro_portrait{
     grid-column: 2/span 1;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.bg_images {
-    
-}
 
 .title {
     display:flex;
@@ -85,10 +161,9 @@ p {
 .nav_links{
     font-size: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    /* background-color: black; */
-    
-    /* padding-top: 30px; */
+    text-align: center;
   }
 
 .nav_item {
@@ -100,7 +175,14 @@ p {
     text-decoration: black underline;
 }
 
+#hello {
+   font-family: 'Fredoka One', 'Poppins', 'Times New Roman', Times, serif; 
+}
 
+#gallery_intro{
+    text-align: center;
+    color:#2b2b2b;
+}
 /* refers to the images */
 .gallery {
     /* display: grid;
@@ -108,32 +190,51 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
     /* flex-direction:row; */
 }
 
 /* refers to the title of the gallery */
 #gallery{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-#img_1, #img_2, #img_3, #img_4, #img_5, #img_6, #img_7, #img_8, #img_9{
+#img_1, #img_2, #img_3, #img_4, #img_5, #img_6, #img_7, #img_8, #img_9, #img_10{
     /* background: black; */
-    border-color: black;
+    border-color: #9AD4D6;
     border-style: solid;
     border-width:4px;
     padding: 9px;
-    margin: 4px;
+    /* margin: 4px; */
+
+    max-width: 100%;
+
+    
 }
+
+.skip a{
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+  
+  }
+  
+  .skip a:focus{
+    top: 0px;  
+  }
 
 
 @keyframes logo_wiggle{
 
     0% {color: white}
-    100% {color:black}
+    100% {color:#3b3b3b}
   } 
   
-  #animation{
+  .animation{
     animation-name: logo_wiggle;
     animation-duration: 5s;
     /* text-align: center; */
@@ -141,13 +242,32 @@ p {
   }
 
   @media (prefers-reduced-motion) {
-    #animation {
+    .animation {
       animation-name: none;
       /* animation-name: logo_wiggle; */
     }
   }
 
+  footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
 @media screen and (min-width: 850px){
+
+    h2 {
+        text-align: left;
+        font-family: 'Poppins', 'Times New Roman', Times, serif;
+        font-size: 38px;
+    }
     
     header {
         /* background-color: black; */
@@ -158,6 +278,13 @@ p {
         justify-content: space-between;
         align-items: center;
     }
+
+    .nav_links{
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
     .container{
         display:grid;
@@ -176,11 +303,42 @@ p {
         margin-left: auto;
     }
 
+    .container{
+        display:grid;
+        grid-template-columns: 35px 1fr 1fr 35px;
+        grid-column-gap: 30px;
+        
+    }
+    
+    .ux_container {
+        display: grid;
+        grid-template-columns: 15px 1fr 1fr 15px;
+        padding-bottom: 50px;
+    }
+    
+    .section_1text, .section_2text, .section_3text, .section_4text {
+        grid-column: 2/span 1;
+        padding: 9px;
+        margin: 4px;
+        text-align: center;
+    }
+    
+    #section_1img, #section_2img , #section_3img{
+        grid-column:3/ span 1;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 
 footer{
     text-align: center;
-    background-color: yellow;
-
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #9AD4D6;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

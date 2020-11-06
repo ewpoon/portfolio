@@ -15,29 +15,30 @@
     </head>
 
     <body>
+      <div class="skip"><a href="#contact_title">Skip to Main Content</a></div>
       <header>
         <!-- background image
         <img src="images/logo.png" alt="logo" id = "logo"> -->
         <span>
-            <h1 class="title" id="animation">Erica Poon</h1>
-            <h3 class="title" id="animation">empathize, ideate, create!</h3>
+            <h1 class="title, animation">Erica Poon</h1>
+            <h3 class="title, animation">empathize, ideate, create!</h3><br>
         </span>
         <nav>
             <!-- none of the links work yet/don't use 'id' since it's going to open new page-->
-          <ul class="nav_links">
-            <li class="nav_item"><a href="index.html">|about|</a></li>
-            <li class="nav_item"><a href="uxportfolio.html">|ux projects|</a></li>
-            <li class="nav_item"><a href="artproject.html">|art projects|</a></li>
-            <li class="nav_item_active_page"><a href="contact.html">|contact|</a></li>
-          </ul>
+            <ul class="nav_links">
+              <li class="nav_item"><a href="index.html">about</a></li>
+              <li class="nav_item"><a href="uxportfolio.html">ux projects</a></li>
+              <li class="nav_item"><a href="artproject.html">art projects</a></li>
+              <li class="nav_item_active_page"><a href="contact.html">contact</a></li>
+            </ul>
       </nav>
       </header>
         
-
           <main>
             <form action="https://formspree.io/f/xrgokzak" method="POST">
               <fieldset>
-                <legend>Sample Form</legend>
+                <h2 id="contact_title">Contact</h2>
+                <p>Have any questions? Feel free to reach out!</p><br>
                 
                 <label for="name_id">Your Name</label>
                 <input type="text" placeholder="Enter Your Name" name="Name" id="name_id">
@@ -66,8 +67,7 @@
           </main>
 
           <footer>
-            <p>Erica Poon<br/>
-              &copy; Erica Poon 2020</p>
+            <p>&copy; Erica Poon 2020</p>
           </footer>
 
     </body>
