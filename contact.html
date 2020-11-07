@@ -34,32 +34,39 @@
       </nav>
       </header>
         
-          <main>
+          <main >
             <form action="https://formspree.io/f/xrgokzak" method="POST">
               <fieldset>
-                <h2 id="contact_title">Contact</h2>
-                <p>Have any questions? Feel free to reach out!</p><br>
+                <h2 id="contact_title">Contact</h2><br>
+
+                <p>Have any questions? Want to be friends on Animal Crossing? Interested in talking animation? Feel free to reach out, I would love to talk!</p><br>
+                <span class="contact_container">
+                  <img src="imgs/portrait_2.JPG" alt="self portrait 2" width="400" id="contact_portrait"/>
+                <br>
                 
-                <label for="name_id">Your Name</label>
+                
+                <label for="name_id" id="name">Your Name</label>
                 <input type="text" placeholder="Enter Your Name" name="Name" id="name_id">
             
-                <label for="email_id" >Your Email</label>
-                <input type="email" name="Email" id="email_id" placeholder="Enter Your Email" required>
+                <label for="email_id" id="email">Your Email</label>
+                <input type="email" name="Email" id="email_id" placeholder="Enter Your Email" required><br>
             
             
-                <label for="phone_id">Your Phone Number</label>
+                <label for="phone_id" id = "phone">Your Phone Number</label>
                 <input type="tel" name="Telephone" id="phone_id" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                <div><span>Format: 123-456-7890</span></div>
+                <!-- <div><span id = "format">Format: 123-456-7890</span></div> -->
             
             
-                <label for="msg">Leave A Message</label>
+                <label for="msg" id ="message">Leave A Message</label>
             
                 <textarea name="Message" id="msg" placeholder="Leave a Message"></textarea>
             
                 <input type="checkbox" name="Remember" id="remember"> 
-                <label for ="remember">Remember me</label>
+                <label for ="remember" id="remember_id">Remember me</label>
             
-                <input type="submit" name="Submit" value="button">
+                <input type="submit" name="Submit" value="Submit" id = "submit">
+              </span>
+              
            
               </fieldset>
              </form>

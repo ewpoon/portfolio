@@ -138,7 +138,7 @@ nav {
     text-align: center;
 }
 
-#section_1img, #section_2img , #section_3img{
+#section_1img, #section_2img , #section_3img, #section_4img{
     grid-column:2/ span 1;
     max-width: 100%;
     margin-left: auto;
@@ -223,6 +223,67 @@ nav {
     
 }
 
+.contact_container {
+    display: grid;
+    grid-template-columns: 14vh 1fr 14vh;
+    grid-row-gap: 10px;
+}
+
+#contact_portrait {
+    max-width: 100%;
+    grid-column: 2 /span 1;
+
+}
+
+.contact_info {
+    display:grid;
+}
+
+#name {
+    grid-column: 1 /span 1;
+}
+
+#name_id {
+    grid-column: 2 /span 1;
+}
+
+#email {
+    grid-column: 1 / span 1;
+}
+
+#email_id {
+    grid-column: 2 / span 1;
+}
+
+#phone {
+    grid-column: 1 / span 1;
+}
+
+#phone_id {
+    grid-column: 2 / span 1;
+}
+
+
+#message {
+    grid-column: 1 / span 1;
+}
+
+#msg {
+    grid-column: 2 / span 1;
+}
+
+#remember {
+    grid-column: 1 / span 1;
+}
+
+#remember_id {
+    grid-column: 2 / span 1; 
+}
+
+#submit {
+    grid-column: 1 / span 1;
+}
+
 .skip a{
     left: 0;
     padding: 6px;
@@ -233,6 +294,7 @@ nav {
     top: -40px;
   
   }
+
   
   .skip a:focus{
     top: 0px;  
@@ -337,7 +399,7 @@ nav {
         text-align: center;
     }
     
-    #section_1img, #section_2img , #section_3img{
+    #section_1img, #section_2img , #section_3img, #section_4img{
         grid-column:3/ span 1;
         max-width: 100%;
         margin-left: auto;
