@@ -16,8 +16,11 @@ header {
     /* background:yellow; */
     /* border-bottom: 3px solid #50C7C7; */
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
+}
+
+hr{
+    border-top:4px dotted #3b3b3b;
 }
 
 h1 {
@@ -68,7 +71,6 @@ h5 {
 p {
     font-family: 'Poppins', 'Times New Roman', Times, serif;
     font-size: 2.2vh;
-    /* font-size: 16px; */
     color: #666666;
     line-height: 26px;
 }
@@ -84,6 +86,11 @@ img {
     border-width: 0.8vh;
     padding: 9px;
     margin: 4px;
+}
+
+audio {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 legend, label, span{
@@ -190,14 +197,17 @@ nav {
    font-size: 5vw;
 }
 
+#memories {
+    text-align: center;
+    margin-top:20px;
+}
+
 #gallery_intro{
     text-align: center;
     color:#2b2b2b;
 }
 /* refers to the images */
 .gallery {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -210,16 +220,21 @@ nav {
     text-align: center;
 }
 
-#img_1, #img_2, #img_3, #img_4, #img_5, #img_6, #img_7, #img_8, #img_9, #img_10{
+#img_1, #img_2, #img_3, #img_4, #img_5, #img_6, #img_7, #img_8, #img_9, #img_10, #img_11, #img_12, #img_13, #img_14, #img_15, #img_16{
     /* background: black; */
     border-color: #9AD4D6;
     border-style: solid;
     border-width:4px;
     padding: 9px;
-    /* margin: 4px; */
-
     max-width: 100%;
+    filter: grayscale(100%);
     
+}
+
+
+#img_1:hover, #img_2:hover, #img_3:hover, #img_4:hover, #img_5:hover, #img_6:hover, #img_7:hover, #img_8:hover, #img_9:hover, #img_10:hover, #img_11:hover, #img_12:hover, #img_13:hover, #img_14:hover, #img_15:hover, #img_16:hover{
+    filter: none;
+    border-color:#9AD4D6;
 }
 
 /* .flip-card {
@@ -277,12 +292,76 @@ nav {
     display:grid;
 }
 
-#contact_title {
+.contact_title {
     text-align: center;
 }
 
+
+#family_portrait, #family_portrait_3, #family_portrait_4 {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#family_portrait_2 {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+
+.flip_card_container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.flip_card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+
+.flip_card:hover, .flip_card:focus, .flip_card_container:focus, .flip_card-focus-within {
+    transform:rotateY(180deg);
+}
+
+.flip_card_front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: #333333;
+}
+
+.flip_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: #333333;
+    transform: rotateY(180deg);
+    text-align: center;
+    /* margin:auto; */
+    background-color:#9AD4D6;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 10px;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+
 #name {
     grid-column: 1 /span 1;
+    max-height:1vh;
 }
 
 #name_id {
@@ -304,7 +383,6 @@ nav {
 #phone_id {
     grid-column: 2 / span 1;
 }
-
 
 #message {
     grid-column: 1 / span 1;
@@ -329,11 +407,33 @@ nav {
 .parallax {
     background-image: url("../imgs/portrait_2.JPG");
     min-height:35vh;
+    width: 82vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.parallax_2 {
+    background-image: url("../imgs/ux.jpg");
+    min-height:35vh;
+    width: 82vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax_3 {
+    background-image: url("../imgs/ux_bg.jpg");
+    min-height:35vh;
+    width: 82vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .skip a{
     left: 0;
@@ -370,6 +470,9 @@ nav {
       animation-name: none;
       /* animation-name: logo_wiggle; */
     }
+    .flip-card {
+        transition: transform none;
+    }
   }
 
   footer{
@@ -388,8 +491,105 @@ nav {
 
 
 /* This one is for tablet */
-@media screen and (min-width: 850px){
+@media screen and (min-width: 500px){
 
+    /* h2 {
+        text-align: left;
+        font-family: 'Poppins', 'Times New Roman', Times, serif;
+        font-size: 2.8vh;
+    } */
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav_links{
+        font-size: 130%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+    .nav_item {
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .container{
+        display:grid;
+        grid-template-columns: 35px 1fr 35px;
+        grid-column-gap: 30px;
+        
+    }
+
+    #intro {
+        grid-column: 2/ span 1;
+    }
+    
+    #intro_portrait{
+        grid-column: 2/span 1;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .ux_container {
+        display: grid;
+        grid-template-columns: 15px 1fr 15px;
+        padding-bottom: 50px;
+    }
+    
+    .section_1text, .section_2text, .section_3text, .section_4text {
+        grid-column: 2/span 1;
+        padding: 9px;
+        margin: 4px;
+        text-align: center;
+    }
+    
+    #section_1img, #section_2img , #section_3img, #section_4img{
+        grid-column:2/ span 1;
+        max-width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .parallax {
+        background-image: url("../imgs/portrait_2.JPG");
+        min-height:25vh;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .parallax_2 {
+        background-image: url("../imgs/ux.jpg");
+        min-height:30vh;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .parallax_3 {
+        background-image: url("../imgs/ux_bg.jpg");
+        min-height:30vh;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+
+/* This is for desktop */
+@media screen and (min-width: 850px){
     h2 {
         text-align: left;
         font-family: 'Poppins', 'Times New Roman', Times, serif;
@@ -461,6 +661,39 @@ nav {
         max-width: 50vw;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .parallax {
+        background-image: url("../imgs/portrait_2.JPG");
+        min-height:40vh;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .parallax_2 {
+        background-image: url("../imgs/ux.jpg");
+        min-height:40vh;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 6vh;
+    }
+
+    .parallax_3 {
+        background-image: url("../imgs/ux_bg.jpg");
+        min-height:40vh;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 4vh;
     }
 
 }
