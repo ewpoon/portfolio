@@ -81,7 +81,7 @@ a {
 img {
     border-color: #9AD4D6;
     border-style: solid;
-    border-width:4px;
+    border-width: 0.8vh;
     padding: 9px;
     margin: 4px;
 }
@@ -110,7 +110,7 @@ nav {
 
 
   *:focus {
-    border: 2px solid;
+    border: .5vh solid;
   }
 
 .container{
@@ -140,7 +140,7 @@ nav {
 
 #section_1img, #section_2img , #section_3img, #section_4img{
     grid-column:2/ span 1;
-    max-width: 100%;
+    max-width: 50vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -153,7 +153,7 @@ nav {
 
 #intro_portrait{
     grid-column: 2/span 1;
-    max-width: 100%;
+    max-width: 50vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -219,9 +219,47 @@ nav {
     /* margin: 4px; */
 
     max-width: 100%;
-
     
 }
+
+/* .flip-card {
+    background-color: transparent;
+    width:100%;
+    height: 100%;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+} */
 
 .contact_container {
     display: grid;
@@ -237,6 +275,10 @@ nav {
 
 .contact_info {
     display:grid;
+}
+
+#contact_title {
+    text-align: center;
 }
 
 #name {
@@ -282,6 +324,15 @@ nav {
 
 #submit {
     grid-column: 1 / span 1;
+}
+
+.parallax {
+    background-image: url("../imgs/portrait_2.JPG");
+    min-height:35vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .skip a{
@@ -336,6 +387,7 @@ nav {
 }
 
 
+/* This one is for tablet */
 @media screen and (min-width: 850px){
 
     h2 {
@@ -356,11 +408,16 @@ nav {
     }
 
     .nav_links{
-        font-size: 20px;
+        font-size: 130%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
+
+    .nav_item {
+        padding-left:15px;
+        padding-right:15px;
+    }
 
     .container{
         display:grid;
@@ -401,12 +458,13 @@ nav {
     
     #section_1img, #section_2img , #section_3img, #section_4img{
         grid-column:3/ span 1;
-        max-width: 100%;
+        max-width: 50vw;
         margin-left: auto;
         margin-right: auto;
     }
 
 }
+
 
 
 footer{
