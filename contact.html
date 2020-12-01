@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
 
     <!-- change this for google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -47,40 +48,50 @@
 
             <form action="https://formspree.io/f/xrgokzak" method="POST">
               <fieldset>
-                <h2 class="contact_title">Contact</h2><br>
+                <h2 id="contact_title">Contact</h2><br>
                 <div class="parallax"></div>
 
-                <p>Have any questions? Want to be friends on Animal Crossing? Interested in talking animation? Feel free to reach out, I would love to talk! Or, listen to my favorite Animal Crossing Tune below!</p><br>
-
-                <audio controls>
-                  <source src="audio/bubblegum_kk.mp3" type="audio/mpeg" alt="Bubblegum KK">
-                </audio>
+                <div id="contact_intro">
+                <p>Have any questions?</p>
+                <br>
+                <p>Want to be friends on Animal Crossing?</p>
+                <br>
+                <p>Interested in talking animation?</p>
+                <p>Feel free to reach out, I would love to talk!</p>
+                <br>
+                <p>Or, listen to my favorite Animal Crossing Tune below!</p><br>
+              </div>
 
                 <span class="contact_container">
                     <!-- <img src="imgs/portrait_2.JPG" alt="self portrait 2" width="400" id="contact_portrait"/> -->
                 <br>
 
+                <audio controls>
+                  <source src="audio/bubblegum_kk.mp3" type="audio/mpeg" alt="Bubblegum KK">
+                </audio>
                 
-                <label for="name_id" id="name">Your Name</label>
+                <label for="name_id" id="name">Name</label>
                 <input type="text" placeholder="Enter Your Name" name="Name" id="name_id">
             
-                <label for="email_id" id="email">Your Email</label>
+                <label for="email_id" id="email">Email</label>
                 <input type="email" name="Email" id="email_id" placeholder="Enter Your Email" required><br>
             
             
-                <label for="phone_id" id = "phone">Your Phone Number</label>
+                <label for="phone_id" id = "phone">Phone Number</label>
                 <input type="tel" name="Telephone" id="phone_id" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 <!-- <div><span id = "format">Format: 123-456-7890</span></div> -->
             
             
-                <label for="msg" id ="message">Leave A Message</label>
+                <label for="msg" id ="message">Leave A Message!</label>
             
                 <textarea name="Message" id="msg" placeholder="Leave a Message"></textarea>
             
+                <div id="remember_box">
                 <input type="checkbox" name="Remember" id="remember"> 
                 <label for ="remember" id="remember_id">Remember me</label>
+              </div>
             
-                <input type="submit" name="Submit" value="Submit" id = "submit">
+                <input type="submit" name="Submit" value="Submit" id= "submit">
               </span>
               
            
