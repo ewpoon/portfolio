@@ -129,6 +129,52 @@ nav {
     
 }
 
+.memory_box {
+    display: grid;
+    grid-template-columns: 35px 1fr 35px;
+    grid-column-gap: 20px;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+#family_1 {
+    grid-column: 2 / span 1;
+    margin-left: auto;
+    margin-right:auto;
+    width: 80%;
+}
+
+#family_1_text{
+    grid-column: 2/ span 1;
+    grid-row: 2 / span 1;
+    text-align: center;
+}
+
+#family_2 {
+    grid-column: 2/ span 1;
+    margin-left: auto;
+    margin-right:auto;
+    width: 80%;
+}
+
+#family_2_text {
+    grid-column: 2/ span 1;
+    grid-row: 4 / span 1;
+    text-align: center;
+}
+
+#family_3 {
+    grid-column: 2/ span 1;
+    margin-left: auto;
+    margin-right:auto;
+    width: 80%;
+}
+
+#family_3_text{
+    grid-column: 2/ span 1;
+    grid-row: 6 / span 1;
+    text-align: center;
+}
+
 #ux_title {
     text-align: center;
 }
@@ -240,44 +286,6 @@ nav {
     opacity: 1.0;
 }
 
-/* .flip-card {
-    background-color: transparent;
-    width:100%;
-    height: 100%;
-}
-
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align:center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-}
-
-.flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
-} */
 
 .contact_container {
     display: grid;
@@ -312,18 +320,18 @@ nav {
 }
 
 #family_portrait_2 {
-    width: 100%;
-    height: 100%;
+    width: 160px;
+    height: 190px;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: auto;
 }
 
 
 .flip_card_container {
     position: relative;
-    width: 220px;
-    height: 220px;
-    margin-bottom: 50px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -337,7 +345,7 @@ nav {
     
 }
 
-.flip_card:hover, .flip_card:focus, .flip_card_container:focus, .flip_card-focus-within {
+.flip_card:hover, .flip_card:focus, .flip_card_container:focus, .flip_card-focus-within, .flip_card_front:focus {
     transform:rotateY(180deg);
 }
 
@@ -359,11 +367,11 @@ nav {
     text-align: center;
     /* margin:auto; */
     background-color:#9AD4D6;
-    margin-left:auto;
-    margin-right:auto;
-    padding-top: 10px;
+    /* margin-left:auto;
+    margin-right:auto; */
+    /* padding-top: 10px;
     padding-left:2px;
-    padding-right:2px;
+    padding-right:2px; */
 }
 
 
@@ -440,7 +448,7 @@ nav {
 .parallax {
     background-image: url("../imgs/self_portrait.JPG");
     min-height:35vh;
-    width: 82vw;
+    width: 89vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -450,7 +458,7 @@ nav {
 .parallax_2 {
     background-image: url("../imgs/ux.jpg");
     min-height:35vh;
-    width: 82vw;
+    width: 87vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -460,7 +468,7 @@ nav {
 .parallax_3 {
     background-image: url("../imgs/ux_bg.jpg");
     min-height:35vh;
-    width: 82vw;
+    width: 89vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -476,7 +484,6 @@ nav {
     z-index: 1;
     position: absolute;
     top: -40px;
-  
   }
 
   
@@ -512,6 +519,35 @@ nav {
     border: 2px solid #9AD4D6;
   }
 
+  .logos {
+    display: grid;
+    grid-template-columns: 1fr 50px 50px 50px 1fr;
+    grid-template-rows: auto auto;
+}
+
+.logo_image {
+    border: none;
+    width:40px;
+}
+
+#instagram {
+    grid-column: 2 / span 1;
+}
+
+
+#instagram_text {
+    grid-column: 2 / span 1;
+}
+
+#github {
+    grid-column: 3 / span 1;
+}
+
+#linkedin {
+    width: 40px;
+    grid-column: 4 / span 1;
+}
+
 
 @keyframes logo_wiggle{
 
@@ -532,7 +568,7 @@ nav {
       /* animation-name: logo_wiggle; */
     }
     .flip-card {
-        transition: transform none;
+        transition: none;
     }
   }
 
@@ -571,7 +607,7 @@ nav {
         font-size: 130%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
       }
 
     .nav_item {
@@ -594,6 +630,52 @@ nav {
         grid-column: 2/span 1;
         margin-right: auto;
         margin-left: auto;
+    }
+
+
+    .memory_box {
+        display: grid;
+        grid-template-columns: 35px 1fr 1fr 35px;
+        grid-template-rows: auto auto auto;
+    }
+
+    #family_1 {
+        grid-column: 2 / span 1;
+        margin-left: auto;
+        margin-right:auto;
+        width: 80%;
+    }
+
+    #family_1_text{
+        grid-column: 3/ span 1;
+        grid-row: 1 / span 1;
+        text-align: center;
+    }
+
+    #family_2 {
+        grid-column: 2 / span 1;
+        margin-left: auto;
+        margin-right:auto;
+        width: 80%;
+    }
+
+    #family_2_text {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+        text-align: center;
+    }
+
+    #family_3 {
+        grid-column: 2 / span 1;
+        margin-left: auto;
+        margin-right:auto;
+        width: 80%;
+    }
+
+    #family_3_text{
+        grid-column: 3 / span 1;
+        text-align: center;
+        grid-row: 3 / span 1;
     }
     
     .ux_container {
@@ -703,6 +785,53 @@ nav {
         grid-column-gap: 30px;
         
     }
+    /* I think this is a repeat above?? */
+
+    .memory_box {
+        display: grid;
+        grid-template-columns: 35px 1fr 1fr 1fr 35px;
+        grid-template-rows: auto auto;
+    }
+
+    #family_1 {
+        grid-column: 2 / span 1;
+        margin-left: auto;
+        margin-right:auto;
+        width: 80%;
+    }
+
+    #family_1_text{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        text-align: center;
+    }
+
+    #family_2 {
+        grid-column: 3 / span 1;
+        margin-left: auto;
+        margin-right:auto;
+        width: 80%;
+    }
+
+    #family_2_text {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+        text-align: center;
+    }
+
+    #family_3 {
+        grid-column: 4 / span 1;
+        margin-left: auto;
+        margin-right:auto;
+        width: 80%;
+    }
+
+    #family_3_text{
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 1;
+        text-align: center;
+    }
+
     
     .ux_container {
         display: grid;
@@ -756,6 +885,7 @@ nav {
         background-size: cover;
         margin-bottom: 4vh;
     }
+
 
 }
 
