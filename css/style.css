@@ -645,13 +645,13 @@ nav {
 
 @keyframes logo_wiggle{
 
-    0% {color: white}
+    0% {color: #ffffff}
     100% {color:#3b3b3b}
   } 
   
   .animation{
     animation-name: logo_wiggle;
-    animation-duration: 5s;
+    animation-duration: 3s;
   }
 
 
@@ -678,7 +678,6 @@ nav {
         transition: none;
         
     }
-    /* figure this out!!! */
 
     div.loading {
        display: none;
@@ -688,6 +687,9 @@ nav {
         transition-duration: 0s;
     }
 
+    #submit {
+        transition-duration: 0s;
+    }
 
   }
 
